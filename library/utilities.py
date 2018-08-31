@@ -697,8 +697,8 @@ def performance_assesment_fraction_std(X, Y, num_experiment, classifier,Model_Na
     acc_test, acc_train =classification_SVM_experiments_std(X, Y, classifier, frac_tr_te, 1,Model_Name,1)
     #plot the figure
     plt.figure(figsize=(10, 7), dpi=80)
-    plt.errorbar(np.floor(fracs), accuracy_test_mean, yerr=accuracy_test_std, label="Error bars plot", fmt="s-",  linewidth=3)
-    plt.errorbar(np.floor(fracs), accuracy_train_mean, yerr=accuracy_train_std, label="Error bars plot", fmt="s-",  linewidth=3)
+    plt.errorbar(fracs, accuracy_test_mean, yerr=accuracy_test_std, label="Error bars plot", fmt="s-",  linewidth=3)
+    plt.errorbar(fracs, accuracy_train_mean, yerr=accuracy_train_std, label="Error bars plot", fmt="s-",  linewidth=3)
     plt.grid(b=True, which='major', color='k', linestyle='--', alpha = 0.4)
     plt.minorticks_on()
     plt.title('SVM perfomances over different train/test dataset of reduced features')
@@ -717,8 +717,6 @@ def get_data(name,num_channels,window_size,step_size):
     data_matrix_1=[]
     labels_1=[]
     labels=[]
-
-
     list_files=os.listdir(name)
 
     train_data=[]

@@ -57,13 +57,14 @@ num_of_features=200
 
 
 ########### loading trained model##########
-model = load_model('models/autoencoder_highpass.h5')
+model = load_model('models/autoencoder_rawsignal.h5')
 ############################################
 
 
 ############# loading input ###############
 path='input/'
-train_data_name=''
+#subfolder
+train_data_name='day1'
 ##########################################à
 
 
@@ -86,8 +87,8 @@ print(intermediate_output.shape)
 
 
 # ettore analysis
-test_features(intermediate_output, 
-              labels, day='day label', visit='visit label', patient='patient label', train_step=500)
+#test_features(intermediate_output, 
+       #      labels, day='day label', visit='visit label', patient='patient label', train_step=500)
 
 
 

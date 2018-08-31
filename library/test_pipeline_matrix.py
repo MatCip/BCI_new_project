@@ -108,6 +108,7 @@ def test_features(x_full, y_full, day='day label', visit='visit label', patient=
         df_extra_grid
     ))
 
+    print('Plotting Tree Models Results')
     plot_block_perf(full_df_tree, 'Tree Models')
-    plot_block_perf(full_df_svm, 'Support Vector Machines Models')
+    #plot_block_perf(full_df_svm, 'Support Vector Machines Models')
 #    plot_block_perf(df_extra_svm, 'Extra Tree + SVM')
